@@ -9,3 +9,6 @@ express
 Development dependencies
 nodemon
 ts-node (tsx does not support types, ts-node-dev has issues with ESMs)
+
+Future
+Babel for advanced ESM support
