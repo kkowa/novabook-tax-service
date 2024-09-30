@@ -1,14 +1,22 @@
 # novabook tax service
 
+-- TECH STACK --
+
+TypeScript
 Node v22.9.0
 ECMAScript ESNext (latest ESM chosen to ensure cross browser compatibility)
+Jest - Testing/cOVERAGE
+Prettier - Code formatting
+ESLint - Code linting and error detection
 
-Production dependencies
+-- DEPENDENCIE LIST --
+
+Production:
 express
 
-Development dependencies
+Development:
 nodemon
 ts-node (tsx does not support types, ts-node-dev has issues with ESMs)
 
-Future
+TODO in future:
 Babel for advanced ESM support
