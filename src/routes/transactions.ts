@@ -18,6 +18,7 @@ router.post('/transactions', (req: Request, res: Response) => {
     const saleEvent: SaleEvent = event;
     events.push(saleEvent);
   }
+
   // Handle Tax Payment Event
   else if (event.eventType === 'TAX_PAYMENT') {
     const taxPaymentEvent: TaxPaymentEvent = event;
@@ -28,7 +29,7 @@ router.post('/transactions', (req: Request, res: Response) => {
   }
 
   // Return 202 Accepted
-  res.status(202).end();
+  res.status(202).json({ message: 'Your transaction has been sent.' }).end();
 });
 
 export default router;
