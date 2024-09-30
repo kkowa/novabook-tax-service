@@ -1,0 +1,21 @@
+{
+  "name": "novabook-tax-service",
+  "version": "1.0.0",
+  "description": "A simple Express.js app with TypeScript and ESM",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --loader ts-node/esm src/main.ts"
+  },
+  "keywords": [],
+  "author": "Katarzyna Kowalska",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2"
+  }
+}
