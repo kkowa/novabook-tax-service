@@ -59,8 +59,7 @@ Development Mode (with auto-reloading):
 
 ```
 
-
-NOTE: do not run in production just yet - theres an error 
+NOTE: do not run in production just yet - theres an error
 
 **Run in production mode**
 
@@ -212,11 +211,13 @@ Status: 202 Accepted
 
 ### Tasks
 
-- [ ] Figure out the fix to push to production 
+- [ ] Figure out the fix to push to production
 - [ ] Deploy
 
-Then recator: 
+Then recator:
+
 - [ ] Improve Code comments
+- [ ] Change TS version so its ok with eslint
 - [ ] Enhence logging
 - [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
 - [ ] Improve validation (express-validator)

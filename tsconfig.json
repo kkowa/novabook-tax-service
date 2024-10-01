@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "outDir": "dist", // Types should go into this directory.
+    "outDir": "dist",
     "declaration": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "module": "ESNext",
-    "target": "ESNext"
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true
   },
   "ts-node": {
     "esm": true,
-    "experimentalSpecifierResolution": "node",
-    "compilerOptions": {
-      "allowImportingTsExtensions": false
-    }
+    "experimentalSpecifierResolution": "node"
   },
   "include": ["src/**/*", "tests/**/*"],
   "exclude": ["node_modules", "dist"]

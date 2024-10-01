@@ -1,8 +1,8 @@
 import express from 'express';
-import transactionRouter from './routes/transactions';
-import taxPositionRouter from './routes/taxPosition';
-import amendSaleRouter from './routes/amendSale';
-import { logger } from './utils/logger';
+import transactionRouter from './routes/transactions.js';
+import taxPositionRouter from './routes/taxPosition.js';
+import amendSaleRouter from './routes/amendSale.js';
+import { logger } from './utils/logger.js';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
