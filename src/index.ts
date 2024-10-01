@@ -24,16 +24,17 @@ app.use(
   (
     err: unknown,
     req: express.Request,
-    res: express.Response
-    // next: express.NextFunction
+    res: express.Response,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    next: express.NextFunction
   ) => {
     logger.error(err);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 );
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   logger.info(`Server is running on port http://localhost:${PORT}`);
 });
 
-export default app;
+export { app, server };

@@ -18,13 +18,13 @@ router.post('/', (req: Request, res: Response) => {
     return;
   }
 
-  try {
-    const eventDate = new Date(event.date);
-    if (isNaN(eventDate.getTime())) {
-      res.status(400).json({ error: 'Invalid date format' });
-      return;
-    }
+  const eventDate = new Date(event.date);
+  if (isNaN(eventDate.getTime())) {
+    res.status(400).json({ error: 'Invalid date format' });
+    return;
+  }
 
+  try {
     if (event.eventType === 'SALES') {
       const saleEvent = event as SaleEvent;
       if (!saleEvent.invoiceId || !Array.isArray(saleEvent.items)) {

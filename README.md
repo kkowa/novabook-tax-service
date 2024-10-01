@@ -77,7 +77,19 @@ Production Mode:
 
 The server will start on port 3000 by default. You can set the PORT environment variable to change the port.
 
-## API Endpoints
+3. **Run Tests**
+
+```bash
+
+  npm test
+
+```
+
+### Code Coverage
+
+![Screenshot 1](coverage.png)
+
+## Testing API Endpoints
 
 1. **Ingest a Sales Event:**
    Endpoint: POST /transactions
@@ -179,5 +191,6 @@ nodemon
 ts-node (tsx does not support types, ts-node-dev has issues with ESMs)
 
 TODO in future:
-More test - increase coverage
+Error Handling Middleware test is failing - check error handeling in index.ts
+Deploy
 Babel for advanced ESM support
