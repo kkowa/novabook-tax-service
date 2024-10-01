@@ -4,6 +4,38 @@ import { logger } from '../utils/logger';
 
 const router = Router();
 
+/**
+ * @swagger
+ * /tax-position:
+ *   get:
+ *     summary: Retrieve tax position for a given date
+ *     tags: [Tax Position]
+ *     parameters:
+ *       - in: query
+ *         name: date
+ *         required: true
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: The date to query the tax position for
+ *     responses:
+ *       200:
+ *         description: Successful response with tax position
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 date:
+ *                   type: string
+ *                 taxPosition:
+ *                   type: number
+ *       400:
+ *         description: Missing or invalid date parameter
+ *       500:
+ *         description: Internal Server Error
+ */
+
 router.get('/', (req: Request, res: Response) => {
   const { date } = req.query;
 

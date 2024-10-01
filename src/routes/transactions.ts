@@ -8,6 +8,43 @@ import { eventStore, saleStore } from '../models/index.js';
 import { logger } from '../utils/logger.js';
 
 const router = Router();
+/**
+ * @swagger
+ * /transactions:
+ *   post:
+ *     summary: Ingest a transaction event
+ *     tags: [Transactions]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               eventType:
+ *                 type: string
+ *               date:
+ *                 type: string
+ *                 format: date
+ *               items:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     itemId:
+ *                       type: string
+ *                     cost:
+ *                       type: number
+ *                     taxRate:
+ *                       type: number
+ *     responses:
+ *       202:
+ *         description: Event successfully ingested
+ *       400:
+ *         description: Invalid event structure
+ *       500:
+ *         description: Internal Server Error
+ */
 
 router.post('/', (req: Request, res: Response) => {
   const event: TransactionEvent = req.body;

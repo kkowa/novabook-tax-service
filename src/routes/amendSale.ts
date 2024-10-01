@@ -4,6 +4,43 @@ import { logger } from '../utils/logger';
 
 export const router = Router();
 
+/**
+ * @swagger
+ * /sale:
+ *   patch:
+ *     summary: Amend an existing sale
+ *     tags: [Sale]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               date:
+ *                 type: string
+ *                 format: date
+ *                 description: The date of the amendment
+ *               invoiceId:
+ *                 type: string
+ *                 description: The ID of the invoice to amend
+ *               itemId:
+ *                 type: string
+ *                 description: The ID of the item to amend
+ *               cost:
+ *                 type: number
+ *                 description: The new cost of the item
+ *               taxRate:
+ *                 type: number
+ *                 description: The new tax rate of the item
+ *     responses:
+ *       202:
+ *         description: Sale successfully amended
+ *       400:
+ *         description: Invalid amendment structure
+ *       500:
+ *         description: Internal Server Error
+ */
 router.patch('/', (req: Request, res: Response) => {
   const { date, invoiceId, itemId, cost, taxRate } = req.body;
 
