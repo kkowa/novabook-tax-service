@@ -1,6 +1,7 @@
 {
   "name": "novabook-tax-service",
   "version": "1.0.0",
+  "main": "dist/index.js",
   "description": "A simple Express.js app with TypeScript and ESM",
   "type": "module",
   "scripts": {
