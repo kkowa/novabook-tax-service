@@ -211,17 +211,17 @@ Status: 202 Accepted
 
 ### Tasks
 
-- [ ] Figure out the fix to push to production
-- [ ] Deploy
+
 
 Then recator:
 
-- [ ] Improve Code comments
-- [ ] Change TS version so its ok with eslint
-- [ ] Enhence logging
+
 - [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
+- [ ] Enhence logging
 - [ ] Improve validation (express-validator)
 - [ ] Improve type safety - there are fes ase where unknown/any is used.
-- [ ] Add .env
+
+Futher
+- [ ] Implement a DB
 - [ ] Implement a DB
 - [ ] Babel for advanced ESM support

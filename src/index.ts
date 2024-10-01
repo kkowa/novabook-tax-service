@@ -48,7 +48,7 @@ app.get('/health', (req, res) => {
 // Error Handling Middleware
 app.use(
   (
-    err: unknown,
+    err: Error,
     req: express.Request,
     res: express.Response,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

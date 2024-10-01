@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { eventStore, saleStore } from '../models/index.js';
 import { logger } from '../utils/logger.js';
+import { SalesAmendmentEvent } from '../models/EventStore.js';
 
 export const router = Router();
 
@@ -72,7 +73,7 @@ router.patch('/', (req: Request, res: Response) => {
     });
 
     // Also, add an amendment event to EventStore for observability
-    const amendmentEvent = {
+    const amendmentEvent : SalesAmendmentEvent = {
       eventType: 'SALES_AMENDMENT',
       date,
       invoiceId,
@@ -82,7 +83,7 @@ router.patch('/', (req: Request, res: Response) => {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    eventStore.addEvent(amendmentEvent as any); // Type casting since EventStore expects TransactionEvent
+    eventStore.addEvent(amendmentEvent); // Type casting since EventStore expects TransactionEvent
 
     logger.info(`Amended sale: ${JSON.stringify(amendmentEvent)}`);
     res.status(202).send();
