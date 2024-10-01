@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "outDir": "dist", // Types should go into this directory.
+    "declaration": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "module": "ESNext",

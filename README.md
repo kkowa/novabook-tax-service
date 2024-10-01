@@ -26,7 +26,7 @@ This service manages tax-related transactions for Novabook. It allows ingestion 
 
 ### Prerequisites
 
-- **Node.js** (v14 or later)
+- **Node.js** (use v20.17.0)
 - **npm**
 
 ### Installation
@@ -49,6 +49,8 @@ This service manages tax-related transactions for Novabook. It allows ingestion 
 
 ### Running the Service
 
+**Run in dev mode**
+
 Development Mode (with auto-reloading):
 
 ```bash
@@ -57,7 +59,7 @@ Development Mode (with auto-reloading):
 
 ```
 
-Production Mode:
+**Run in production mode**
 
 1. **Build the project:**
 
@@ -77,11 +79,29 @@ Production Mode:
 
 The server will start on port 3000 by default. You can set the PORT environment variable to change the port.
 
-3. **Run Tests**
+or
+
+**Run using Docker**
+
+```bash
+
+  docker compose up --build
+
+```
+
+### Running the Tests\*\*
 
 ```bash
 
   npm test
+
+```
+
+or using docker
+
+```bash
+
+  docker compose run test
 
 ```
 
@@ -178,25 +198,23 @@ Status: 202 Accepted
     curl "http://localhost:3000/tax-position?date=2024-02-23T10:00:00Z"
 ```
 
-    Response:
-
 ```json
-    {
+    Response:{
         "date": "2024-02-23T10:00:00Z",
         "taxPosition": -72701 + (798 _ 0.15 - 1099 _ 0.2) = // Calculate accordingly
     }
 ```
 
--- DEPENDENCIE LIST --
+## To-Do List
 
-Production:
-express
+### Tasks
 
-Development:
-nodemon
-ts-node (tsx does not support types, ts-node-dev has issues with ESMs)
-
-TODO in future:
-Error Handling Middleware test is failing - check error handeling in index.ts
-Deploy
-Babel for advanced ESM support
+- [ ] Improve Code comments
+- [ ] Enhence logging
+- [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
+- [ ] Improve validation (express-validator)
+- [ ] Improve type safety - there are fes ase where unknown/any is used.
+- [ ] Add .env
+- [ ] Implement a DB
+- [ ] Deploy
+- [ ] Babel for advanced ESM support
