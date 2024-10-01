@@ -59,6 +59,9 @@ Development Mode (with auto-reloading):
 
 ```
 
+
+NOTE: do not run in production just yet - theres an error 
+
 **Run in production mode**
 
 1. **Build the project:**
@@ -209,6 +212,10 @@ Status: 202 Accepted
 
 ### Tasks
 
+- [ ] Figure out the fix to push to production 
+- [ ] Deploy
+
+Then recator: 
 - [ ] Improve Code comments
 - [ ] Enhence logging
 - [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
@@ -216,5 +223,4 @@ Status: 202 Accepted
 - [ ] Improve type safety - there are fes ase where unknown/any is used.
 - [ ] Add .env
 - [ ] Implement a DB
-- [ ] Deploy
 - [ ] Babel for advanced ESM support
