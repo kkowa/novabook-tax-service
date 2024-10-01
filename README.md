@@ -95,6 +95,8 @@ The server will start on port 3000 by default. You can set the PORT environment 
 
 Navigate to http://localhost:3000/api-docs (or your configured port) to view the automatically generated documentation for your API.
 
+### Test with bash script
+
 1. **Ingest a Sales Event:**
    Endpoint: POST /transactions
    Description: Ingests sales events.
