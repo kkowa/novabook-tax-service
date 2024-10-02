@@ -20,7 +20,7 @@ This service manages tax-related transactions for Novabook. It allows ingestion 
 - **Jest** for coverage
 - **Prettier** for code formatting
 - **ESLint** for code linting and error detection
-- **Vercel** for deployment
+- **Render** for deployment
 
 ## Getting Started
 
@@ -103,7 +103,8 @@ or using docker
 
 ```bash
 
-  docker compose run test
+  docker build -t novabook-tax-service .      
+  docker run novabook-tax-service                                                                                                                ✔  22:46:52        
 
 ```
 
@@ -213,15 +214,9 @@ Status: 202 Accepted
 
 
 
-Then recator:
-
+TODO: 
 
 - [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
 - [ ] Enhence logging
 - [ ] Improve validation (express-validator)
-- [ ] Improve type safety - there are fes ase where unknown/any is used.
-
-Futher
-- [ ] Implement a DB
-- [ ] Implement a DB
 - [ ] Babel for advanced ESM support
