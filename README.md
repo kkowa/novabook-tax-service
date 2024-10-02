@@ -103,8 +103,8 @@ or using docker
 
 ```bash
 
-  docker build -t novabook-tax-service .      
-  docker run novabook-tax-service                                                                                                                ✔  22:46:52        
+  docker build -t novabook-tax-service .
+  docker run novabook-tax-service                                                                                                                ✔  22:46:52
 
 ```
 
@@ -212,11 +212,8 @@ Status: 202 Accepted
 
 ### Tasks
 
+TODO:
 
-
-TODO: 
-
-- [ ] Error Handling Middleware test is failing - check error handeling in index.ts - 100% coverage
+- [ ] Improve Error Handling Middleware
 - [ ] Enhence logging
 - [ ] Improve validation (express-validator)
-- [ ] Babel for advanced ESM support
